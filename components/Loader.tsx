@@ -12,7 +12,7 @@ const Loader = ({ imagesLoaded }: { imagesLoaded: boolean }) => {
         setTimeout(() => {
           setEffect(false);
         }, 1000);
-      }, 0);
+      }, 1000);
     } else {
       clearTimeout(timer);
     }
