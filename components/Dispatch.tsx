@@ -6,6 +6,21 @@ import Main from './Main';
 
 const Dispatch = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [isLoader, setIsLoader] = useState(true);
+
+  useEffect(() => {
+    let timer: any;
+
+    if (imagesLoaded) {
+      timer = setTimeout(() => {
+        setIsLoader(false);
+      }, 1000);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [imagesLoaded]);
 
   useEffect(() => {
     const imagePromises: Promise<void>[] = PLACES.map((place) => {
@@ -29,7 +44,7 @@ const Dispatch = () => {
   return (
     <div className="h-screen w-full">
       <Main />
-      <Loader imagesLoaded={imagesLoaded} />
+      {isLoader && <Loader imagesLoaded={imagesLoaded} />}
     </div>
   );
 };

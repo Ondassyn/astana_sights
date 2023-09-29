@@ -12,7 +12,7 @@ const Loader = ({ imagesLoaded }: { imagesLoaded: boolean }) => {
         setTimeout(() => {
           setEffect(false);
         }, 500);
-      }, 0);
+      }, 500);
     } else {
       clearTimeout(timer);
     }
@@ -26,7 +26,7 @@ const Loader = ({ imagesLoaded }: { imagesLoaded: boolean }) => {
     <div
       className={`absolute top-0 left-0 bg-slate-100 z-50 h-screen w-full
         flex flex-col justify-center items-center ${
-          imagesLoaded && 'opacity-0 transition duration-500 ease-in'
+          imagesLoaded && 'opacity-0 transition duration-1000 ease-in'
         }`}
     >
       <div className="relative">
