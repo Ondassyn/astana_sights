@@ -1,6 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from 'react';
 import Title from './Title';
 import Background from './Background';
 import Credits from './Credits';

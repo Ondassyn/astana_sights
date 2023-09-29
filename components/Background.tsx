@@ -1,6 +1,6 @@
 import { PLACES } from '@/data/places';
 import Image from 'next/image';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
 const Background = ({
   effect,

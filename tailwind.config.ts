@@ -18,6 +18,10 @@ const config: Config = {
         'slide-up' : 'my-slide-up 1s ease-in-out forwards'
       },
       keyframes: {
+        'my-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
         'my-spin-in': {
           '0%': { transform: 'rotate(0deg)', opacity: '0' },
           '100%': { transform: 'rotate(360deg)', opacity: '1' },
